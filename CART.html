@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  
+	<meta charset="utf-8">
+	<title>HCI</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/cart.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  
+</head>
+  
+<body>
+  
+		<nav>
+			<input type="checkbox" id="check">
+			<label for="check" class="checkbtn">
+			<i class="fas fa-bars"></i>
+			</label>
+			<label class="logo">BISTRO</label>
+			<ul>
+				<li><a href="index.html">HOME</a></li>
+				<li><a href="ABOUT.html">ABOUT</a></li>
+				<li><a href="#">BUY</a>					
+				<ul class="dropdown">
+						<li><a href="desserts.html">desserts</a></li>
+						<li><a href="dishes.html">dishes</a></li>
+						<li><a href="drinks.html">drinks</a></li>
+						<li><a href="specials.html">specials</a></li>
+					</ul>
+				</li>
+				<li><a href="#">CART</a></li>
+			</ul>
+		</nav>
+		
+<section>
+  <h1>YOUR CART</h1>
+  <div class="shopcart">
+    <div id="left-bar">
+    </div>
+    <div class="right-bar" id="right-bar">
+      <div class="cart-summary">
+        <div class="summary-row">
+          <p>Quantity:</p>
+          <p id="count">0</p>
+        </div>
+        <div class="summary-row">
+          <p>Total:</p>
+          <p id="total">₱0.00</p>
+        </div>
+      </div>
+      <a class="checkout-btn" onclick="myfunction(), delElement2()">
+        <ion-icon name="cart-outline"></ion-icon>CHECKOUT
+      </a>
+    </div>
+  </div>
+</section>
+    
+    
+    <script> 
+  function myfunction() {
+   alert("THANK YOU FOR BUYING!");
+}
+function delElement2(a) {
+  cart.splice(a, 100);
+  localStorage.setItem('cart', JSON.stringify(cart));
+  displaycart();
+
+}
+
+</script>
+
+	
+    <footer class="footer-distributed">
+
+        <div class="footer-left">
+            <h3>BISTRO</h3>
+
+            <p class="footer-links">
+                <a href="index.html">HOME</a>
+                |
+                <a href="ABOUT.html">ABOUT</a>
+            </p>
+
+        </div>
+
+        <div class="footer-center">
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>+919*****07</p>
+            </div>
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:alsherette14@gmail.com">alsherette14@gmail.com</a></p>
+            </div>
+        </div>
+        <div class="footer-right">
+            <p class="footer-company-about">
+                <span>About the website:</span>
+                <strong>bistro</strong> is a project in Human-Computer Interaction made by: John Alsherette M. Ramos BSCS 2-A
+            </p>
+    </footer>
+		
+<script src="javascript/script.js"></script>
+<script src="javascript/dishes.js"></script>
+<script src="javascript/desserts.js"></script>
+<script src="javascript/drinks.js"></script>
+<script src="javascript/specials.js"></script>
+
+</body>
+  
+</html>
